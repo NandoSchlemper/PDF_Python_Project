@@ -1,10 +1,9 @@
 import { useState, useEffect } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
   const [mensagem, setMensagem] = useState('');
+  const [number, setNumber] = useState(0);
 
   useEffect(() => {
     fetch('http://localhost:5000/api/data')
@@ -17,6 +16,9 @@ function App() {
     <>
       <div className='App'>
         <header className='App-header'>
+          <h1>
+            Welcome to our services! Wesley at your disposal!
+          </h1>
           <p>
             Mensagem do Backend: {mensagem}
           </p>
